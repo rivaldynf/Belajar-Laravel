@@ -1,0 +1,70 @@
+Instal Php
+https://pemburukode.com/cara-install-php-terbaru-di-windows-10-202101/
+
+1. instal composer
+2. instal laravel
+3. composer create-project laravel/laravel example-app 
+(artinya menyimpan file project di dalam folder "applications")
+4. cara buat file yaitu masuk ke dalam folder applications, 
+   lalu membuat folder untuk file laravel contoh folder
+   yang sudah ada yaitu "coba-laravel"
+
+Cara Menjalankan Laravel
+1. Masuk ke terminal file project
+2. Ketik "php artisan serve"
+
+The Laravel Installer
+1. composer global require laravel/installer
+2. Ketik "cd .."
+3. Klik kanan di start menu, pilih system cari advanced system settings
+4. Environment Variables, cari Path di "System variables"
+   Klik edit lalu tambahkan "%USERPROFILE%\AppData\Roaming\Composer\vendor\bin"
+5. Ketik "laravel new example-app" di terminal C:\applications
+   coba2-laravel adalah sebuah file folder baru   
+
+Instal Vallet Laravel (Fungsi valet = konfigurasi menjadi lebih mudah)
+valet park = tempat parkir aplikasi di folder "applications"
+1. Ketik di terminal "composer global require cretueusebiu/valet-windows"
+2. Ketik valet install
+
+Cara Localhost Xampp
+1. 80 di ganti 8080	
+
+Akses Laravel Setelah install
+1. coba-laravel.test
+
+Cara Bikin Migration Database
+1. php artisan make:migration *nama tabel*
+2. php artisan migrate
+
+Database, Migration & Eqloquent
+1. php artisan tinker
+
+Table Relationship
+
+Seeding
+1. php artisan db:seed
+
+Factory / Faker
+1. Berfungsi sebagai data dummy secara otomatis
+2. php artisan make:factory PostFactory
+3. Cara ganti data faker menjadi data indonesia
+   1. Config->app.php = Kolom 109 
+      'faker_locale' => env('FAKER_LOCALE' ,'en_US'),
+   2. .env 
+      FAKER_LOCALE=id_ID
+
+Tips N+1
+composer require itsgoingd/clockwork -w
+eager loading = eloquent laravel
+*When building a query, you may specify which 
+ relationships should be eager loaded using 
+ the with method
+1. butuh eager loading = tidak diload sebelum data dipanggil
+2. mengakses dan memanipulasi data yang tersimpan 
+   di dalam database dengan perintah yang lebih singkat 
+   dan mempercepat proses pembuatan CRUD dari database.   
+
+Cara Membuat Library Image
+1. php artisan storage:link
+
